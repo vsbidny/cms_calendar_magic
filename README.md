@@ -10,9 +10,8 @@ CMS_CALENDAR_MAGIC is a service for adding CMS connection details into Outlook i
 
 Tested with Exchange 2016. It should work with Exchange 2109 also, but not tested.
 
-It is recommended to set up the ThrottlingPolicy on Exchange ONPREM as written in the Cisco guide for the Webex hybrid calendar service:
-
-https://help.webex.com/en-us/article/n6cwujdb/Deployment-guide-for-Hybrid-Calendar#task_CB78B94EF3314588849BA11255E0BF0E
+#It is recommended to set up the ThrottlingPolicy on Exchange ONPREM as written in the Cisco guide for the Webex hybrid calendar service:
+#https://help.webex.com/en-us/article/n6cwujdb/Deployment-guide-for-Hybrid-Calendar
 
 New-ThrottlingPolicy -Name "CalendarConnectorPolicy" -EWSMaxConcurrency unlimited -EWSMaxBurst unlimited -EWSRechargeRate unlimited -EWSCutOffBalance unlimited -EWSMaxSubscriptions 5000
 Set-ThrottlingPolicyAssociation -Identity "impersonation account" -ThrottlingPolicy "CalendarConnectorPolicy"
