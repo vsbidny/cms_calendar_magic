@@ -1,0 +1,23 @@
+[CMS API]
+base_cms_url = https://cms.domain.com:445/api/v1/
+apiuser = apiuser
+apipwd = apipass
+users_synctime = 00:00
+jiddomain = @domain.com
+personal_room = space
+wb_url = https://cms.domain.com
+sipdomain = @domain.com
+
+[EWS]
+impers_usr = cmssched@domain.com
+impers_pwd = impaccpass
+Server = RUC-MSEXCH-01.domain.com
+magic_w = @cms
+mail_domain = @domain.com
+inv_template = templates/templ1_en.html
+
+[Logging]
+Sync_log_file = logs/cmssync.log
+Sub_log_file = logs/subscriptions.log
+Meetings_log_file = logs/meetings.log
+log_level = INFO

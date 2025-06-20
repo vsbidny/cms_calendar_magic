@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #85594c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #66725a;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #85594c;
+        }
+        .details {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #70757a;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        h2 {
+            color: #85594c;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .disclaimer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #888888;
+            font-style: italic;
+            text-align: center;
+        }
+        .var-highlight {
+            background: #ecebe7;
+            color: #85594c;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+            font-size: 95%;
+            margin: 0 2px;
+        }
+        a.var-highlight, a.var-highlight:visited {
+            color: #66725a;
+            text-decoration: underline;
+            background: #ecebe7;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Вы приглашены на встречу Cisco Meeting</h1>
+    </div>
+
+    <div class="content">
+        <p>Уважаемый коллега,</p>
+        <p>Приглашаем вас принять участие в онлайн-встрече. Пожалуйста, выберите удобный способ подключения:</p>
+
+        <div style="text-align: center;">
+            <a href="{{WEB_LINK}}" class="button var-highlight">Подключиться к встрече</a>
+        </div>
+
+        <h2>Детали подключения</h2>
+
+        <div class="details">
+            <p><strong>Для браузеров (Chrome, Edge, Safari):</strong><br>
+            <a href="{{WEB_LINK}}" class="var-highlight">{{WEB_LINK}}</a></p>
+
+            <p><strong>Для видео-системы или SIP-клиента:</strong><br>
+            <a href="CISCOTEL:{{SIP_ADDRESS}}" class="var-highlight">{{SIP_ADDRESS}}</a></p>
+
+            <p><strong>Телефонное подключение:</strong><br>
+            +7 (495) 123-45-67<br>
+            Введите ID встречи <span class="var-highlight">{{callid}}</span>, PIN <span class="var-highlight">{{PIN}}</span> и нажмите #</p>
+        </div>
+    </div>
+
+
+    <div class="disclaimer">
+        Эта встреча запланирована волшебным словом <b>@cms</b> в поле "место" собрания MS Outlook. Без плагинов, ГМО и консервантов. Попробуйте!
+    </div>
+</body>
+</html>

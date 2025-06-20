@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #1a73e8;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #1565c0;
+        }
+        .details {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #70757a;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        h2 {
+            color: #1a73e8;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .var-highlight {
+            background: #e3f0fa;
+            color: #1565c0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+            font-size: 95%;
+            margin: 0 2px;
+        }
+        a.var-highlight, a.var-highlight:visited {
+            color: #1a73e8;
+            text-decoration: underline;
+            background: #e3f0fa;
+        }
+        .disclaimer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #888888;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>You are invited to a Cisco Meeting</h1>
+    </div>
+
+    <div class="content">
+        <p>Dear colleague,</p>
+        <p>You are invited to participate in an online meeting. Please choose a convenient way to join:</p>
+
+        <div style="text-align: center;">
+            <a href="{{WEB_LINK}}" class="button var-highlight">Join the meeting</a>
+        </div>
+
+        <h2>Connection Details</h2>
+
+        <div class="details">
+            <p><strong>For browsers (Chrome, Edge, Safari):</strong><br>
+            <a href="{{WEB_LINK}}" class="var-highlight">{{WEB_LINK}}</a></p>
+
+            <p><strong>For video system or SIP client:</strong><br>
+            <a href="CISCOTEL:{{SIP_ADDRESS}}" class="var-highlight">{{SIP_ADDRESS}}</a></p>
+
+            <p><strong>Phone connection:</strong><br>
+            +7 (495) 123-45-67<br>
+            Enter meeting ID <span class="var-highlight">{{callid}}</span>, PIN <span class="var-highlight">{{PIN}}</span> and press #</p>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        This meeting was scheduled using the magic word <b>@cms</b> in the "Location" field of the MS Outlook meeting — no plugins required.<br>Try it yourself!
+    </div>
+</body>
+</html>
